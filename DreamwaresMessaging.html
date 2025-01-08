@@ -23,17 +23,8 @@
                 console.error('Error loading Embedded Messaging: ', err);
             }
         };
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('DOM fully loaded and parsed');
-            var script = document.createElement('script');
-            script.type = 'text/javascript';
-            script.src = 'https://dreamwaresitsolution2-dev-ed.develop.my.site.com/ESWDreamwaresMessagingE1735811554297/assets/js/bootstrap.min.js';
-            script.onload = initEmbeddedMessaging;
-            script.onerror = function() {
-                console.error('Failed to load the script.');
-            };
-            document.head.appendChild(script);
-        });
+       
     </script>   
+    <script type='text/javascript' src='https://dreamwaresitsolution2-dev-ed.develop.my.site.com/ESWDreamwaresMessagingE1735811554297/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 </body>
 </html>
