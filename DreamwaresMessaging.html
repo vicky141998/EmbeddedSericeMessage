@@ -10,30 +10,24 @@
         function initEmbeddedMessaging() {
             try {
                 embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
-    
+                /*window.addEventListener("onEmbeddedMessagingReady", () => {
+                    console.log("Received the onEmbeddedMessagingReady event…");
+                     embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({"UserId" : "123"});
+                     
+                });*/
                 embeddedservice_bootstrap.init(
-                    '00DdL00000I0aU9',
-                    'Dreamwares_Messaging_Embedded_Service',
-                    'https://dreamwaresitsolution2-dev-ed.develop.my.site.com/ESWDreamwaresMessagingE1735811554297',
+                    '00D5j000007LfVk',
+                    'DemoMessaginforInAppandWeb',
+                    'https://velocitytechnology-dev-ed.my.site.com/ESWDemoMessaginforInAppan1715866375435',
                     {
-                        scrt2URL: 'https://dreamwaresitsolution2-dev-ed.develop.my.salesforce-scrt.com'
+                        scrt2URL: 'https://velocitytechnology-dev-ed.my.salesforce-scrt.com'
                     }
                 );
             } catch (err) {
                 console.error('Error loading Embedded Messaging: ', err);
             }
         };
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('DOM fully loaded and parsed');
-            var script = document.createElement('script');
-            script.type = 'text/javascript';
-            script.src = 'https://dreamwaresitsolution2-dev-ed.develop.my.site.com/ESWDreamwaresMessagingE1735811554297/assets/js/bootstrap.min.js';
-            script.onload = initEmbeddedMessaging;
-            script.onerror = function() {
-                console.error('Failed to load the script.');
-            };
-            document.head.appendChild(script);
-        });
-    </script>   
+    </script>
+    <script type='text/javascript' src='https://velocitytechnology-dev-ed.my.site.com/ESWDemoMessaginforInAppan1715866375435/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 </body>
 </html>
